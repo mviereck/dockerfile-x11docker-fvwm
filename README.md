@@ -21,7 +21,7 @@ Look at `x11docker --help` for further options.
 To add your desired applications, create your own Dockerfile with this image as a base. Example:
 ```
 FROM x11docker/fvwm
-RUN apk-add midori
+RUN apk-add --no-cache midori
 ```
  # Screenshot
  FVWM desktop in a Xephyr window running with x11docker:
