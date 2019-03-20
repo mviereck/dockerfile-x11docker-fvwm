@@ -7,7 +7,7 @@ FVWM desktop on alpine. Petite image size.
 # Command examples: 
  - Single application: `x11docker x11docker/fvwm xterm`
  - Full desktop: `x11docker --desktop x11docker/fvwm`
- - Full desktop with init system openrc: `x11docker --desktop --openrc x11docker/fvwm`
+ - Full desktop with init system openrc: `x11docker --desktop --init=openrc x11docker/fvwm`
 
 # Options:
  - Persistent home folder stored on host with   `--home`
