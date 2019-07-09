@@ -23,7 +23,7 @@
 #
 # Look at x11docker --help for further options.
 
-FROM alpine:edge
+FROM alpine
 RUN apk add --no-cache fvwm font-bitstream-type1 xterm && \
     apk add --no-cache dbus openrc && \
     cp /usr/share/fvwm/default-config/Fvwm* /usr/share/fvwm
