@@ -17,14 +17,19 @@
 #
 # Options:
 # Persistent home folder stored on host with   --home
-# Shared host folder with                      --sharedir DIR
+# Shared host file or folder with              --share PATH
 # Clipboard sharing with option                --clipboard
 # Sound support with option                    --alsa
 #
 # Look at x11docker --help for further options.
 
 FROM alpine
-RUN apk add --no-cache fvwm font-bitstream-type1 xterm && \
-    apk add --no-cache dbus openrc && \
+RUN apk add --no-cache \
+      fvwm \
+      font-bitstream-type1 \
+      xterm && \
+    apk add --no-cache \
+      dbus \
+      openrc && \
     cp /usr/share/fvwm/default-config/Fvwm* /usr/share/fvwm
 CMD fvwm

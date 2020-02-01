@@ -1,8 +1,7 @@
 # x11docker/fvwm
 FVWM desktop on alpine. Petite image size.
  - Run FVWM desktop in docker.
- - Use x11docker to run GUI applications and desktop environments in docker images. 
- - Get [x11docker from github](https://github.com/mviereck/x11docker)
+ - Use [x11docker](https://github.com/mviereck/x11docker) to run GUI applications and desktop environments in docker images. 
 
 # Command examples: 
  - Single application: `x11docker x11docker/fvwm xterm`
@@ -11,7 +10,7 @@ FVWM desktop on alpine. Petite image size.
 
 # Options:
  - Persistent home folder stored on host with   `--home`
- - Shared host folder with                      `--sharedir DIR`
+ - Shared host file or folder with              `--share PATH`
  - Clipboard sharing with option                `--clipboard`
  - Sound support with option                    `--alsa`
 
@@ -23,9 +22,9 @@ To add your desired applications, create your own Dockerfile with this image as 
 FROM x11docker/fvwm
 RUN apk-add --no-cache midori
 ```
- # Screenshot
- FVWM desktop in a Xephyr window running with x11docker:
+# Screenshot
+FVWM desktop in a Xephyr window running with x11docker:
  
- ![screenshot](https://raw.githubusercontent.com/mviereck/x11docker/screenshots/screenshot-fvwm.png "FVWM desktop running in Xephyr window using x11docker")
+![screenshot](https://raw.githubusercontent.com/mviereck/x11docker/screenshots/screenshot-fvwm.png "FVWM desktop running in Xephyr window using x11docker")
  
 
